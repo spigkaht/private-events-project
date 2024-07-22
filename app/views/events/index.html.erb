@@ -1,0 +1,22 @@
+<h1>Events</h1>
+
+<ul>
+  <% @events.each do |event, i| %>
+    <li>
+      <h3><%= event.name %></h3>
+      <p><%= event.date %></p>
+      <p><%= event.location %></p>
+    </li>
+  <% end %>
+</ul>
+
+<h1>My Created Events</h1>
+<ul>
+  <% current_user.events.each do |event, i| %>
+    <li>
+      <h3><%= event.name %></h3>
+      <p><%= event.date %></p>
+      <p><%= event.location %></p>
+    </li>
+  <% end %>
+</ul>
